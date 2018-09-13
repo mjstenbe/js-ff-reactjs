@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>WS1/R0333</title>
+<link rel="stylesheet" href="../R0333.css">
+<link rel="icon" href="../favicon.png" type="image/x-icon"/>
+</head>
+<body>
+<img src="../react.png" alt="vue.js" class="logo"/>
+<h1>R0333 - Project Web App Development with a Javascript Framework</h1>
+<h2>React.js: Workshop 1 - Basics</h2>
+<p>&nbsp;</p>
+<hr/>
+<div id="exercise1">
+  <h3>Exercise 1 - Setup the environment</h3>
+  <p>Open the Node.js command prompt. Run the npx command to set up local server environment for Node.
+    This might take a while.</p>
+  <p><code>$ npx create-react-app workshop1<br>
+    $ cd workshop1 <br>
+    $ npm start <br>
+    </code></p>
+  <p> Now you have a local React.js development environment set up and server running at http://localhost:3000. See whats there!</p>
+</div>
+<div>
+<h3>Exercise 2 - Studying the files</h3>
+<div>
+  <ol>
+    <li>Open newly created folder workshop1 with the editor of your choice. </li>
+    <li>Open two files: <strong>public/index.html </strong>and <strong>src/App.js</strong>. Study them a bit and try to see whats going on. Compare the code to what you see in the Browser window.</li>
+    <li>Try to add text in index.html. See the results in browser.</li>
+    <li>Change the page title and intro text from App.js. Save the file and see the output in browser. Notice that the the server updates automatically.</li>
+    <li>Now you can clean up the files a bit: remove file <em><strong>App.js</strong></em><strong>, <em>App.css</em>, <em>App.test.js</em>, <em>logo.svg</em> </strong>and<strong> <em>registerServiceWorker.js.</em></strong></li>
+  </ol>
+  <div class="bordered"> </div>
+</div>
+<div>
+  <h3>Exercise 3 - Writing your first component</h3>
+  <div>
+    <ol>
+      <li>Open the file index.js</li>
+      <li> Add the following code snippets there and see the output in the browser<br>
+        <br>
+        <xmp> import React from "react";
+          import ReactDOM from "react-dom";
+          
+          const Greetings = () => {
+          console.log("Hello World");
+          
+          return (
+          <div>
+            <p>Hello world</p>
+          </div>
+          );
+          };
+          
+          ReactDOM.render(
+          <Greetings />
+          , document.getElementById("root")); </xmp>
+        <br>
+    </ol>
+  </div>
+</div>
+<div>
+  <h3>Exercise 4 - Writing another component with styles</h3>
+  <div>
+    <ol>
+      <li> Create another function called Quote </li>
+      <li>Place it after the Greetings-function in index.js</li>
+      <li>The function should return a div element with an id=&quot;myStyle&quot;. Come up with a nice quote for the contents.</li>
+      <li>Define myStyle CSS in App.css. You can create your own style, but here is a sample to start with: <br>
+        <xmp> #myStyle {
+          border: 2px solid black;
+          text-align: center;
+          background: #f5f5f5;
+          color: #333;
+          margin: 10px;
+          padding: 10px;
+          }</xmp>
+      </li>
+      <li>Finally add the statement import &quot;./App.css&quot;; in the beginning of the index.js file</li>
+      <li>See the output</li>
+      <li>Add a new &lt;div id=&quot;ex4&quot;&gt; to index.html and render the output there.<br>
+      </li>
+    </ol>
+  </div>
+</div>
+<div>
+  <h3>Exercise 5 - Nested components </h3>
+  <div>
+    <ol>
+      <li> Create another function called ManyQuotes </li>
+      <li>Place it after the Quote-function in index.js</li>
+      <li> Function should return a &lt;div&gt; element, which has 5 &lt;Quote /&gt; components inside.</li>
+      <li>See the output</li>
+      <li>Add a new &lt;div id=&quot;ex5&quot;&gt; to index.html and render the output there.<br>
+      </li>
+    </ol>
+  </div>
+</div>
+<div>
+  <h3>Exercise 6 - Passing values to components with props</h3>
+  <div>
+    <ol>
+      <li> Create another function called CustomQuote </li>
+      <li> Function should return a &lt;div&gt; element, which returns a quote defined as props in JSX tag</li>
+      <li>Render the function using the tag &lt;CustomQuote quote=&quot;Make love, not war.&quot; /&gt;</li>
+      <li>See the output</li>
+      <li>Add id and CSS styles for the &lt;div&gt; elements</li>
+      <li>Add a new &lt;div id=&quot;ex6&quot;&gt; to index.html and render the output there.</li>
+      <li>Render 3 different quotes using CutomQuote-component</li>
+      <li>Add another attribute &quot;author&quot; to the CustomQuote -tag, which will define author the the quote. </li>
+      <li>Try it using the render methdod with &lt;CustomQuote quote=&quot;Make love, not war.&quot; author=&quot;John Lennon&quot; /&gt;<br>
+      </li>
+    </ol>
+  </div>
+  
+  <div>
+  <h3>Exercise 7 - Passing JSON data to components</h3><div>
+    <ol>
+      <li> Create another function called QuoteArray </li>
+      <li> Function should return a &lt;div&gt; element, which return a list of quotes passed in as JavaScript array</li>
+      <li>Output every quote between &lt;li&gt; tags </li>
+      <li>Add id and CSS styles for the &lt;div&gt; elements</li>
+      <li>Add a new &lt;div id=&quot;ex7&quot;&gt; to index.html and render the output there.</li>
+      <li>You can use sample JSON dataset as below. <br>
+        <xmp>
+          const quotes = [
+          {
+          quote: "Life isn’t about getting and having, it’s about giving and being.",
+          author: "Kevin Kruse"
+          },
+          {
+          quote: "Whatever the mind of man can conceive and believe, it can achieve.",
+          author: "Napoleon Hill"
+          },
+          {
+          quote: "Strive not to be a success, but rather to be of value.",
+          author: "Albert Einstein"
+          },
+          {
+          quote:
+          "Two roads diverged in a wood, and I—I took the one less traveled by, And that has made all the difference.",
+          author: "Robert Frost"
+          },
+          {
+          quote: "I attribute my success to this: I never gave or took any excuse.",
+          author: "Florence Nightingale"
+          }
+          ];
+        </xmp>
+      </li>
+      <li>Render 1st, 3rd and 7th quotes  from the table</li>
+      <li>When everything works, output the author after every quote.<br>
+      </li>
+    </ol>
+  </div>
+</div>
+<div>
+  <h3>Exercise 8 - Looping through the JSON data</h3>
+  <div>
+    <ol>
+      <li> Create another function called QuoteArrayAll, you can copy the code from ex 6 as template</li>
+      <li> Refactor the code so that it will loop through the array and output all the content as an HTML list.</li>
+      <li>HINT: Use the <a href="https://www.w3schools.com/jsref/jsref_map.asp">map-function</a> in return statement to go through the data. <br>
+        <br>
+        Try the map function in console first:<br>
+        <br>
+        <xmp>
+          // Define quote data
+          const quotes = [
+          {
+          quote: "Life isn’t about getting and having, it’s about giving and being.",
+          author: "Kevin Kruse"
+          },
+          {
+          quote: "Whatever the mind of man can conceive and believe, it can achieve.",
+          author: "Napoleon Hill"
+          }
+          
+          ];
+      	// Loop through the data using map function, for each item, execute and return the item.author.toUpperCase() function
+        quotes.map( item => (  
+			item.author.toUpperCase() 
+            )
+         );
+        </xmp>
+      </li>
+      <li>Add nice styles to the app.<br>
+      </li>
+    </ol>
+  </div>
+</div>
+<hr/>
+<footer>&copy; Mika Stenberg Laurea UAS</footer>
+</body>
