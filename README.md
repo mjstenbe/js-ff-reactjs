@@ -1,1 +1,1 @@
-# js-ff-reactjs
+Assignments and solutions for React.js workshops
