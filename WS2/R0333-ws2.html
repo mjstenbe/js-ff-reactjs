@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>WS1/R0333</title>
+<link rel="stylesheet" href="../R0333.css">
+<link rel="icon" href="../favicon.png" type="image/x-icon"/>
+</head>
+<body>
+<img src="../react.png" alt="vue.js" class="logo"/>
+<h1>R0333 - Project Web App Development with a Javascript Framework</h1>
+<h2>React.js: Workshop 2 - Classes, states, events, forms</h2>
+<p>&nbsp;</p>
+<hr/>
+<div id="exercise1">
+  <div id="exercise2">
+    <h3>Exercise 1 - Class based components with state</h3>
+    <ol>
+      <li>Create class based component &lt;HelloWorld /&gt; </li>
+      <li>Define a state (class variable) called &quot;greeting&quot; for the component in constructor</li>
+      <li>Output the greeting within some HTML-elements. </li>
+      <li>Add styles, such as border and backgroundcolor etc.</li>
+    </ol>
+  </div>
+  <div>
+  <h3>Exercise 2 - Object state</h3>
+  <div>
+    <ol>
+      <li>Create button component which renders a &lt;HelloWorld /&gt;greeting to user when clicked</li>
+      <li>Test drive your app</li>
+      <li>Add another button labeled as &quot;Translate&quot;, which calls for a method frenchify() </li>
+      <li>Create a method frenchify() which changes the greeting text set in state variable (class variable) of HelloWorld-component to another language </li>
+      <li>You can create other buttons as well, such as &quot;englify&quot; and &quot;finnify&quot;.</li>
+    </ol>
+    <div class="bordered"> </div>
+  </div>
+  <div>
+    <h3>Exercise 3 - Button and state</h3>
+    <div>
+      <ol>
+        <li> Create a class based component called &quot;&lt;GenderButton /&gt;</li>
+        <li>Button has a state called &quot;gender&quot;, which keeps track whether this button is set to Male or Female. Default setting is Male.</li>
+        <li>When the button is clicked, it will call for a method handleClick(). The method will change state-variable &quot;gender&quot; to either Female or Male, depending on the current value.</li>
+        <li>Output a log message to the console displaying the button info</li>
+        <li>Set the label of the button to the current value of Gender state.<br>
+          <button>Male</button>
+        </li>
+      </ol>
+    </div>
+  </div>
+  <div>
+    <h3>Exercise 4 - Button as a component</h3>
+    <div>
+      <ol>
+        <li> Create a class based component called &quot;&lt;Button /&gt;</li>
+        <li>Button has a state called counter, which keeps track on the times it was clicked</li>
+        <li>Button accepts its title (name shown on the screen) as props<br>
+          <pre>&lt;Button&#32;title="First&#32;button"/&gt;<br>&lt;Button&#32;title="Second&#32;button"/&gt;</pre>
+        </li>
+        <li>When the button is clicked, it will call for a method increment(). The method will increment state-variable counter with one</li>
+        <li>Output a log message to the console displaying the button and counter info</li>
+        <li>Finally concatenate the number in counter after the buttons title:<br>
+          <br>
+          <img src="images/buttons.png" width="213" height="71"></li>
+      </ol>
+    </div>
+  </div>
+  <div>
+    <h3>Exercise 5 - Modules</h3>
+    <div>
+      <ol>
+        <li> Refactor the code produced during this workshop</li>
+        <li>Copy the code for &lt;Helloworld /&gt; component into its own file. &quot;Helloworld.js&quot;</li>
+        <li>At the end of the new file add the line: <br>
+          <pre>export default HelloWorld</pre>
+        <li>Save the file under src/components/ -folder (you have to create the components-folder)</li>
+        <li>Then import the module using import statement similar to the ones used before:
+          <pre>import&#32;'./components/Helloworld.js';<br>
+    </pre>
+        </li>
+        <li>Test to see everything works. </li>
+        <li>Then Do the same for other components in the workshop as well </li>
+      </ol>
+    </div>
+  </div>
+  <div>
+  <h3>Exercise 6 - Forms </h3>
+  <div>
+    <ol>
+      <li> Add functionality to a simple form below.</li>
+      <li>When the Submit button is clicked, display the entered data in an alert box (hint: use onSubmit -event)</li>
+      <li>Test to see if its working. When youre done, proceed to step 4.</li>
+      <li>When the data in the field changes, update the contents to the summary textarea (hint: onChange -event)</li>
+      <li>Capitalize the data in textarea</li>
+    </ol>
+    <p> Login
+      <label for="textfield">:</label>
+      <input type="text" name="login" id="login">
+    </p>
+    <p>
+      <label for="textarea">Summary:</label>
+      <textarea name="summary" id="summary"></textarea>
+    </p>
+    <p>
+      <input type="submit" name="submit" id="submit" value="Sendme">
+    </p>
+    <p>&nbsp;</p>
+    <p><br>
+    </p>
+  </div>
+  <div>
+    <h3>Exercise 7 - Conditional rendering</h3>
+    <div>
+      <ol>
+        <li>Add functionality to the form in exercise 6. When the user enters login: &quot;admin&quot; he/she will she shown a text &quot;Welcome admin&quot; and a logout button.</li>
+        <li>Use state: loggedIn: true/false to determine whether a succesful login has occured</li>
+        <li>Otherwise &quot;Permission Denied&quot; with a login field will be shown.</li>
+      </ol>
+    </div>
+  </div>
+  <div>
+    <h3>Exercise 8 - ToDo List</h3>
+    <div>
+      <ol>
+        <li> <br>
+        </li>
+      </ol>
+    </div>
+    <div>
+      <h3>Bonus - Saving state with localstorage?</h3>
+      <div>
+        <ol>
+          <li>Notice, that when the page is refreshed, the state is reset.</li>
+          <li>Change the GenderButton created in ex3 so, that it will save the gender data to JavaScript localStorage (you learned this in Dynamic Web Apps)</li>
+          <li>Use developer tools and console.log to make sure the data is there</li>
+          <li>Then change the program so, that it will try to read the data from localStorage on page reload <br>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  <h3><br>
+  </h3>
+</div>
+<div>
+  <div>  </div>
+</div>
+<hr/>
+<footer>&copy; Mika Stenberg Laurea UAS</footer>
+</body>
